@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About CAIA - Centre for Academic Innovation and Advancement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-teal: #007367;
+      --cream: #f4e4c9;
+      --dark-teal: #004740;
+      --mint: #8bcbb7;
+      --warm-brown: #a58255;
+      --gold-accent: #ccba8d;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--dark-teal);
+    }
+    nav {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--mint);
+    }
+    nav a {
+      color: var(--dark-teal);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-teal);
+    }
+    .card {
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold" style="color: var(--primary-teal);">CAIA</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html#hero" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="offerings.html" class="hover:underline font-semibold text-primary-teal">Offerings</a>
+        <a href="events.html" class="hover:underline">Events</a>
+        <a href="highlights.html" class="hover:underline">Highlights</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-24 pb-12">
+    <section aria-labelledby="leadership-title" class="mb-16">
+      <h2 id="leadership-title" class="text-3xl font-semibold mb-8 text-center">Leadership Messages</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="card p-6">
+          <img src="images/kns-acharya.jpg" alt="KNS Acharya - Pro VC" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" />
+          <h3 class="text-xl font-bold mb-2">KNS Acharya – Pro VC</h3>
+          <p class="text-sm leading-relaxed">Leading with vision and commitment to academic excellence and innovation in higher education.</p>
+        </article>
+        <article class="card p-6">
+          <img src="images/anupama-nithyanand.jpg" alt="Anupama Nithyanand - Director" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" />
+          <h3 class="text-xl font-bold mb-2">Anupama Nithyanand – Director</h3>
+          <p class="text-sm leading-relaxed">Driving transformative learning experiences and fostering leadership development.</p>
+        </article>
+        <article class="card p-6">
+          <img src="images/rajesh-sola.jpg" alt="Rajesh Sola - Deputy Director" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" />
+          <h3 class="text-xl font-bold mb-2">Rajesh Sola – Deputy Director</h3>
+          <p class="text-sm leading-relaxed">Committed to advancing academic innovation and supporting lifelong learning initiatives.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="team-title">
+      <h2 id="team-title" class="text-3xl font-semibold mb-8 text-center">Team</h2>
+      <div class="space-y-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6">Professional Skills Experts</h3>
+          <div class="relative">
+            <div class="flex overflow-x-auto space-x-6 scrollbar-hide" tabindex="0" aria-label="Professional Skills Experts carousel">
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/sanu-zachariah.jpg" alt="Sanu Zachariah" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Sanu Zachariah</h4>
+                <p class="text-sm">Professional Skills Expert with expertise in communication and leadership.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/meghna-ganguly.jpg" alt="Meghna Ganguly" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Meghna Ganguly</h4>
+                <p class="text-sm">Specialist in professional development and training.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/mehul-shah.jpg" alt="Mehul Shah" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Mehul Shah</h4>
+                <p class="text-sm">Expert in skill enhancement and academic coaching.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/moses-kotikela.jpg" alt="Moses Kotikela" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Moses Kotikela</h4>
+                <p class="text-sm">Professional development strategist and mentor.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/priyanka.jpg" alt="Priyanka" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Priyanka</h4>
+                <p class="text-sm">Trainer focused on leadership and communication skills.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/manikumar.jpg" alt="Manikumar" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Manikumar</h4>
+                <p class="text-sm">Expert in professional skills and academic support.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/kaustabh-nandi.jpg" alt="Kaustabh Nandi" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Kaustabh Nandi</h4>
+                <p class="text-sm">Specialist in communication and leadership development.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-6">Technical Team</h3>
+          <div class="relative">
+            <div class="flex overflow-x-auto space-x-6 scrollbar-hide" tabindex="0" aria-label="Technical Team carousel">
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/rajesh-sola.jpg" alt="Rajesh Sola" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Rajesh Sola</h4>
+                <p class="text-sm">Deputy Director and technical lead.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/shirsh-agrawal.jpg" alt="Shirsh Agrawal" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Shirsh Agrawal</h4>
+                <p class="text-sm">Technical expert in IT and systems management.</p>
+              </article>
+              <article class="card p-4 min-w-[280px] max-w-[280px] flex-shrink-0">
+                <img src="images/amit-chavan.jpg" alt="Amit Chavan" class="w-full h-40 object-cover rounded-md mb-3" loading="lazy" />
+                <h4 class="font-bold text-lg mb-1">Amit Chavan</h4>
+                <p class="text-sm">Technical specialist in software and infrastructure.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
