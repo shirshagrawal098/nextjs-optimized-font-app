@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events - CAIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-teal: #007367;
+      --cream: #f4e4c9;
+      --dark-teal: #004740;
+      --mint: #8bcbb7;
+      --warm-brown: #a58255;
+      --gold-accent: #ccba8d;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--dark-teal);
+    }
+    nav {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--mint);
+    }
+    nav a {
+      color: var(--dark-teal);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-teal);
+    }
+    .filter-btn {
+      background: white;
+      border: 2px solid var(--primary-teal);
+      color: var(--primary-teal);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary-teal);
+      color: white;
+    }
+    .event-card {
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .event-card:hover {
+      transform: scale(1.03);
+    }
+    .event-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--primary-teal);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .facilitator-card {
+      flex: 0 0 auto;
+      width: 150px;
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+      scroll-snap-align: start;
+    }
+    .facilitator-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 9999px;
+      object-fit: cover;
+      margin: 0 auto 0.5rem;
+    }
+    /* Lightbox styles */
+    #pdf-lightbox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #pdf-lightbox iframe {
+      width: 80vw;
+      height: 80vh;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    #pdf-lightbox .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary-teal);
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      width: 2rem;
+      height: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold" style="color: var(--primary-teal);">CAIA</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html#hero" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="offerings.html" class="hover:underline font-semibold text-primary-teal">Offerings</a>
+        <a href="events.html" class="hover:underline">Events</a>
+        <a href="highlights.html" class="hover:underline">Highlights</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative bg-cover bg-center h-64 md:h-96" style="background-image: url('images/events-hero.jpg');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
+    <div class="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+      <h1 class="text-white text-4xl md:text-6xl font-extrabold">Events</h1>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <section class="mb-8">
+      <div class="flex space-x-4 justify-center">
+        <button class="filter-btn active" data-status="all">All</button>
+        <button class="filter-btn" data-status="upcoming">Upcoming</button>
+        <button class="filter-btn" data-status="completed">Completed</button>
+      </div>
+    </section>
+
+    <section id="events-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Example event card -->
+      <article class="event-card relative" data-status="upcoming">
+        <img src="images/event1.jpg" alt="Event 1" class="event-image" loading="lazy" />
+        <span class="badge">Upcoming</span>
+        <div class="p-4 flex flex-col flex-grow">
+          <h3 class="font-bold text-xl mb-2">Innovative Teaching Workshop</h3>
+          <p class="text-sm mb-4">Duration: 3 days</p>
+          <div class="mt-auto flex space-x-4">
+            <a href="#" class="filter-btn px-4 py-2">Register</a>
+            <button class="filter-btn px-4 py-2 details-btn" data-pdf="pdfs/event1-details.pdf">Details</button>
+          </div>
+        </div>
+      </article>
+      <!-- Add more event cards similarly -->
+    </section>
+
+    <!-- Removed Expert Facilitators section as per user request -->
+  </main>
+
+  <div id="pdf-lightbox" role="dialog" aria-modal="true" aria-label="Event Details PDF">
+    <button class="close-btn" aria-label="Close PDF lightbox">&times;</button>
+    <iframe src="" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const eventCards = document.querySelectorAll('#events-grid article');
+    const lightbox = document.getElementById('pdf-lightbox');
+    const iframe = lightbox.querySelector('iframe');
+    const closeBtn = lightbox.querySelector('.close-btn');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const status = btn.getAttribute('data-status');
+        eventCards.forEach(card => {
+          if (status === 'all' || card.getAttribute('data-status') === status) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.querySelectorAll('.details-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const pdfSrc = button.getAttribute('data-pdf');
+        iframe.src = pdfSrc;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      iframe.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        iframe.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
