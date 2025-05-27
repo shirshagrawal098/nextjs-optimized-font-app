@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors */
+:root {
+  --primary-teal: #007367;
+  --cream: #f4e4c9;
+  --dark-teal: #004740;
+  --mint: #8bcbb7;
+  --warm-brown: #a58255;
+  --gold-accent: #ccba8d;
+}
+
+/* Body and typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-teal);
+}
+
+/* Scroll snapping for full screen sections */
+html, body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--primary-teal);
+  border-radius: 25px;
+}
+
+.scroll-indicator::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--primary-teal);
+  border-radius: 50%;
+  margin: 6px auto;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Navbar styles */
+nav {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--mint);
+}
+
+nav a {
+  color: var(--dark-teal);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-teal);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Scrollbar hide for carousels */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive container max width */
+.max-w-7xl {
+  max-width: 1200px;
+}
+
+/* Utility for fade-in on scroll */
+[data-scroll] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-scroll].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
