@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leadership - CAIA Offerings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-teal: #007367;
+      --cream: #f4e4c9;
+      --dark-teal: #004740;
+      --mint: #8bcbb7;
+      --warm-brown: #a58255;
+      --gold-accent: #ccba8d;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--dark-teal);
+    }
+    nav {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--mint);
+    }
+    nav a {
+      color: var(--dark-teal);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-teal);
+    }
+    .card {
+      background: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    section {
+      scroll-snap-align: start;
+      min-height: 100vh;
+      padding: 4rem 1.5rem;
+    }
+    .intro-header {
+      background: url('../images/leadership-header.jpg') center/cover no-repeat;
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    .intro-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 115, 103, 0.7), rgba(0, 71, 64, 0.7));
+      z-index: 0;
+    }
+    .intro-header > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-2xl font-bold" style="color: var(--primary-teal);">CAIA</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="../index.html#hero" class="hover:underline">Home</a>
+        <a href="../about.html" class="hover:underline">About</a>
+        <a href="../offerings.html" class="hover:underline font-semibold text-primary-teal">Offerings</a>
+        <a href="../events.html" class="hover:underline">Events</a>
+        <a href="../highlights.html" class="hover:underline">Highlights</a>
+        <a href="../contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="intro-header">
+    <h1 class="text-5xl font-extrabold mb-4">Leadership</h1>
+    <p class="text-xl max-w-3xl">Inspiring academic leadership for a transformative future.</p>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6">
+    <div class="md:flex md:items-center md:gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-semibold mb-4">Why it matters</h2>
+        <p class="text-lg leading-relaxed">Effective leadership drives innovation and excellence in academic institutions, fostering growth and lifelong learning.</p>
+      </div>
+      <div class="md:w-1/2 mt-6 md:mt-0">
+        <img src="../images/leadership-why.jpg" alt="Leadership Importance" class="rounded-lg shadow-lg" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 mt-16">
+    <h2 class="text-3xl font-semibold mb-8">Key Programs</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="card p-6 flex flex-col items-center text-center">
+        <img src="../images/icons/leadership1.svg" alt="Program Icon" class="w-16 h-16 mb-4" loading="lazy" />
+        <h3 class="font-bold text-xl mb-2">Leadership Development</h3>
+        <p>Empowering leaders with skills to inspire and innovate.</p>
+      </div>
+      <div class="card p-6 flex flex-col items-center text-center">
+        <img src="../images/icons/leadership2.svg" alt="Program Icon" class="w-16 h-16 mb-4" loading="lazy" />
+        <h3 class="font-bold text-xl mb-2">Strategic Planning</h3>
+        <p>Building visionary strategies for academic success.</p>
+      </div>
+      <div class="card p-6 flex flex-col items-center text-center">
+        <img src="../images/icons/leadership3.svg" alt="Program Icon" class="w-16 h-16 mb-4" loading="lazy" />
+        <h3 class="font-bold text-xl mb-2">Change Management</h3>
+        <p>Guiding institutions through effective transformation.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
