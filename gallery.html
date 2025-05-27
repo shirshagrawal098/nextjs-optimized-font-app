@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - CAIA Highlights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-teal: #007367;
+      --cream: #f4e4c9;
+      --dark-teal: #004740;
+      --mint: #8bcbb7;
+      --warm-brown: #a58255;
+      --gold-accent: #ccba8d;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--dark-teal);
+    }
+    nav {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--mint);
+    }
+    nav a {
+      color: var(--dark-teal);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-teal);
+    }
+    .gallery-grid {
+      max-width: 7xl;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold" style="color: var(--primary-teal);">CAIA</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html#hero" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="offerings.html" class="hover:underline font-semibold text-primary-teal">Offerings</a>
+        <a href="events.html" class="hover:underline">Events</a>
+        <a href="highlights.html" class="hover:underline">Highlights</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24">
+    <h1 class="text-3xl font-semibold text-center mb-8">Gallery</h1>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/gallery1.jpg" alt="Gallery Image 1" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery2.jpg" alt="Gallery Image 2" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery3.jpg" alt="Gallery Image 3" loading="lazy" />
+      </div>
+      <!-- Add more gallery items as needed -->
+    </div>
+  </main>
+</body>
+</html>
