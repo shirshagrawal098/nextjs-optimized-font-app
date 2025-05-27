@@ -41,6 +41,18 @@
     .card:hover {
       transform: scale(1.05);
     }
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -59,6 +71,64 @@
   </nav>
 
   <main class="max-w-7xl mx-auto px-6 pt-24 pb-12">
+    <!-- Section 1: Why CAIA -->
+    <section id="why-caia" class="relative bg-teal-50 rounded-2xl shadow-lg px-6 py-16 mb-16 overflow-hidden">
+      <svg class="absolute top-0 left-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 600">
+        <circle cx="400" cy="300" r="300" fill="url(#paint0_radial)" />
+        <defs>
+          <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 300) rotate(90) scale(300)">
+            <stop stop-color="#8bcbb7" />
+            <stop offset="1" stop-color="#f4e4c9" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="relative max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold mb-6 text-dark-teal fade-in">Why CAIA?</h2>
+        <p class="mb-4 text-lg leading-relaxed max-w-3xl mx-auto fade-in" style="animation-delay: 0.1s;">
+          At the Centre for Academic Innovation and Advancement (CAIA), we believe in the transformative power of learning.
+        </p>
+        <p class="mb-4 text-lg leading-relaxed max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
+          Our mission is to empower faculty, staff, and students by building their leadership potential, enhancing academic quality, and fostering a culture of continuous professional development.
+        </p>
+        <p class="text-lg leading-relaxed max-w-3xl mx-auto fade-in" style="animation-delay: 0.3s;">
+          We act as GITAM University’s learning engine—where strategy meets creativity, research meets impact, and development meets real-world relevance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: What We Do -->
+    <section id="what-we-do" class="mb-16">
+      <h2 class="text-4xl font-extrabold mb-12 text-center text-dark-teal">What We Do</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-6">
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer fade-in">
+          <img src="https://undraw.co/api/illustrations/academic_cap.svg" alt="Leadership Development" class="w-24 h-24 mb-4" />
+          <h3 class="font-semibold text-lg mb-2">Leadership Development</h3>
+          <p class="text-sm text-gray-700">Build institutional leaders with vision, clarity, and influence.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer fade-in" style="animation-delay: 0.1s;">
+          <img src="https://undraw.co/api/illustrations/teaching.svg" alt="Teaching Faculty Development" class="w-24 h-24 mb-4" />
+          <h3 class="font-semibold text-lg mb-2">Teaching Faculty Development</h3>
+          <p class="text-sm text-gray-700">Enhance pedagogy, curriculum design, and classroom innovation.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer fade-in" style="animation-delay: 0.2s;">
+          <img src="https://undraw.co/api/illustrations/student_skills.svg" alt="Student Professional Skills" class="w-24 h-24 mb-4" />
+          <h3 class="font-semibold text-lg mb-2">Student Professional Skills</h3>
+          <p class="text-sm text-gray-700">Equip students with industry-ready capabilities and soft skills.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer fade-in" style="animation-delay: 0.3s;">
+          <img src="https://undraw.co/api/illustrations/research.svg" alt="Research Faculty Development" class="w-24 h-24 mb-4" />
+          <h3 class="font-semibold text-lg mb-2">Research Faculty Development</h3>
+          <p class="text-sm text-gray-700">Support researchers in grants, publishing, and global engagement.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer fade-in" style="animation-delay: 0.4s;">
+          <img src="https://undraw.co/api/illustrations/office_worker.svg" alt="Non-Teaching Staff Development" class="w-24 h-24 mb-4" />
+          <h3 class="font-semibold text-lg mb-2">Non-Teaching Staff Development</h3>
+          <p class="text-sm text-gray-700">Train administrative and support staff for operational excellence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Messages -->
     <section aria-labelledby="leadership-title" class="mb-16">
       <h2 id="leadership-title" class="text-3xl font-semibold mb-8 text-center">Leadership Messages</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -80,6 +150,7 @@
       </div>
     </section>
 
+    <!-- Team Section -->
     <section aria-labelledby="team-title">
       <h2 id="team-title" class="text-3xl font-semibold mb-8 text-center">Team</h2>
       <div class="space-y-12">
