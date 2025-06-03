@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CAIA - Empowering Academic Growth at GITAM through leadership, innovation, and lifelong learning." />
   <title>CAIA - Empowering Academic Growth at GITAM</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
-    /* Custom colors */
     :root {
       --primary-teal: #007367;
       --cream: #f4e4c9;
@@ -22,18 +29,6 @@
       background-color: var(--cream);
       color: var(--dark-teal);
     }
-    /* Scroll snapping for full screen sections */
-    html, body {
-      scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
-      height: 100%;
-      overflow-y: scroll;
-    }
-    section {
-      scroll-snap-align: start;
-      min-height: 100vh;
-    }
-    /* Fade-in animation */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -45,7 +40,6 @@
         transform: translateY(0);
       }
     }
-    /* Scroll indicator */
     .scroll-indicator {
       position: absolute;
       bottom: 2rem;
@@ -71,29 +65,23 @@
       50% { transform: translateY(20px); opacity: 0; }
       100% { transform: translateY(0); opacity: 1; }
     }
-    /* Navbar styles */
-    nav {
-      background-color: var(--cream);
-      border-bottom: 1px solid var(--mint);
-    }
-    nav a {
-      color: var(--dark-teal);
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: var(--primary-teal);
-    }
   </style>
 </head>
-<body>
-  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm">
+<body class="antialiased text-[#004740]">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-sm bg-[#f4e4c9] border-b border-[#8bcbb7]" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold" style="color: var(--primary-teal);">CAIA</a>
-      <div class="space-x-6 hidden md:flex">
-        <a href="index.html#hero" class="hover:underline">Home</a>
+      <div class="flex items-center space-x-3 text-center leading-tight">
+        <img src="https://github.com/shirshagrawal098/nextjs-optimized-font-app/blob/main/Photos/logo.png?raw=true" alt="Additional Logo" class="h-16 w-auto" />
+        <div class="flex flex-col">
+          <a href="index.html" class="text-2xl font-bold text-[#007367]">CAIA</a>
+          <span class="text-xs text-[#004740] mt-1">Centre for Academic<br />Innovation and Advancement</span>
+        </div>
+      </div>
+      <div class="space-x-6 hidden md:flex text-sm md:text-base">
+        <a href="#hero" class="hover:underline">Home</a>
         <a href="about.html" class="hover:underline">About</a>
-        <a href="offerings.html" class="hover:underline font-semibold text-primary-teal">Offerings</a>
+        <a href="offerings.html" class="hover:underline">Offerings</a>
         <a href="events.html" class="hover:underline">Events</a>
         <a href="highlights.html" class="hover:underline">Highlights</a>
         <a href="contact.html" class="hover:underline">Contact</a>
@@ -101,14 +89,112 @@
     </div>
   </nav>
 
-  <section id="hero" class="relative flex items-center justify-center bg-cover bg-center" style="background-image: url('images/hero-bg.jpg');">
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex items-center justify-center bg-cover bg-center min-h-screen" style="background-image: url('images/hero-bg.jpg');">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
     <div class="relative max-w-7xl mx-auto px-6 text-center text-white fade-in">
       <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Empowering Academic Growth at GITAM</h1>
+      <br><br>
       <p class="text-lg md:text-2xl mb-8">Driving innovation in teaching, leadership, and lifelong learning</p>
-      <a href="about.html" class="inline-block bg-primary-teal hover:bg-dark-teal text-white font-semibold py-3 px-8 rounded-lg transition-transform transform hover:scale-105">Learn More</a>
+      <!-- <a href="about.html" class="inline-block bg-[#007367] hover:bg-[#004740] text-white font-semibold py-3 px-8 rounded-lg transition-transform transform hover:scale-105">
+        Learn More
+      </a> -->
     </div>
-    <div class="scroll-indicator"></div>
+    <div class="scroll-indicator" aria-hidden="true"></div>
   </section>
+
+<!-- Strategic Themes Section -->
+<section class="w-full bg-[#f4e4c9] py-16 px-4" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto flex flex-col gap-8 items-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-[#004740] mb-6 text-center">Our Strategic Themes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
+
+      <a href="https://univision-website.s3.eu-north-1.amazonaws.com/univision-2025-leadership-development/index.html" data-aos="fade-up" data-aos-delay="100" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold text-[#004740] text-center">Leadership Development</h3>
+        <p class="text-sm text-gray-600 text-center mt-2">Equipping academic leaders with strategic vision and execution excellence.</p>
+      </a>
+
+      <a href="offerings/teaching.html" data-aos="fade-up" data-aos-delay="200" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold text-[#004740] text-center">Teaching Faculty Development</h3>
+        <p class="text-sm text-gray-600 text-center mt-2">Enhancing instructional skills and academic effectiveness through innovation.</p>
+      </a>
+
+      <a href="offerings/studentskills.html" data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold text-[#004740] text-center">Student Professional Skills Development</h3>
+        <p class="text-sm text-gray-600 text-center mt-2">Preparing students with career-ready competencies and workplace confidence.</p>
+      </a>
+
+      <a href="offerings/research.html" data-aos="fade-up" data-aos-delay="400" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold text-[#004740] text-center">Research Faculty Development</h3>
+        <p class="text-sm text-gray-600 text-center mt-2">Supporting faculty in advancing impactful research and publication outcomes.</p>
+      </a>
+
+      <a href="offerings/nonteaching.html" data-aos="fade-up" data-aos-delay="500" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-transform">
+        <h3 class="text-lg font-semibold text-[#004740] text-center">Non-teaching Staff Development</h3>
+        <p class="text-sm text-gray-600 text-center mt-2">Empowering staff with skills for efficient academic and administrative support.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAIA at a Glance Section -->
+<section class="w-full bg-[#f4e4c9] py-16 px-4" aria-labelledby="glance-heading">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 id="glance-heading" class="text-3xl md:text-5xl font-bold text-[#004740] mb-12">CAIA at a Glance</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      <!-- Tile 1 -->
+      <div class="bg-white shadow-md rounded-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <h3 class="text-4xl font-bold text-gray-700 mb-2">100+</h3>
+        <p class="text-gray-600">Teaching Staff Trained</p>
+      </div>
+
+      <!-- Tile 2 -->
+      <div class="bg-white shadow-md rounded-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <h3 class="text-4xl font-bold text-gray-700 mb-2">50+</h3>
+        <p class="text-gray-600">Non-Teaching Staff Trained</p>
+      </div>
+
+      <!-- Tile 3 -->
+      <div class="bg-white shadow-md rounded-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <h3 class="text-4xl font-bold text-gray-700 mb-2">50+</h3>
+        <p class="text-gray-600">Events & Workshops Conducted</p>
+      </div>
+
+      <!-- Tile 4 -->
+      <div class="bg-white shadow-md rounded-xl p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <h3 class="text-4xl font-bold text-gray-700 mb-2">500+</h3>
+        <p class="text-gray-600">Students Trained in Professional Skills</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-8 mt-16">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0 text-center md:text-left">
+      <p class="text-sm">&copy; 2024 CAIA. All rights reserved.</p>
+    </div>
+    <div class="space-x-6 text-sm flex justify-center md:justify-end w-full md:w-auto">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="offerings.html" class="hover:underline">Offerings</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
